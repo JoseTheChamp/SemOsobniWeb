@@ -13,6 +13,10 @@
     margin: auto;
 }
 
+.about, .home, .contact, .navbar{
+    font-family: 'Roboto', sans-serif;
+}
+
 
 /*Navbar styling*/
 .navbar{
@@ -105,15 +109,17 @@
     font-family: 'Roboto', sans-serif;
 }
 section{
-    padding: 100px 0;
+    padding: 80px 0;
 }
-.about .about-text{
+.title{
+    font-family: 'Roboto', sans-serif;
     position: relative;
     text-align: center;
     font-size: 42px;
     font-weight: 500;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     padding-bottom: 20px;
+    margin-top: 20px;
 }
 .about .about-content .left{
     width: 45%;
@@ -162,6 +168,117 @@ section{
 
 
 
+
+/* contact styling*/
+.contact{
+    font-family: 'Roboto', sans-serif;
+}
+.contact .contact-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+.contact .contact-content .left{
+    text-align: justify;
+}
+.contact .contact-content .text{
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.contact .contact-content p{
+    font-weight: 300;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.contact .contact-content .icons .row{
+    display: flex;
+    height: 60px;
+    align-items: center;
+    margin-top: 5px;
+}
+/*
+.contact .contact-content .right{
+    margin-top: -126px; TODO vyre3it tuto nesrovnalost u kontakt prava cast je nize nez leva
+}
+*/
+.contact .contact-content .icons .row .info{
+    margin-left: 20px;
+}
+.contact .contact-content .icons .row i{
+    font-size: 25px;
+}
+.contact .contact-content .icons .info .head{
+    font-weight: 500;
+}
+.contact .contact-content .icons .info .sub-title{
+    font-weight: 400;
+}
+.contact .contact-content .right form .fields{
+    display: flex;
+}
+.contact .contact-content .right form .fields{
+    display: flex;
+}
+.contact .contact-content .right form .field,
+.contact .contact-content .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.contact .contact-content .right form .textarea{
+    height: 80px;
+}
+
+
+.contact .contact-content .right form .field input,
+.contact .contact-content .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 24px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+}
+.contact .contact-content .right form .name{
+    margin-right: 10px;
+}
+.contact .contact-content .right form .email{
+    margin-left: 10px;
+}
+.contact .contact-content .right form .textarea textarea{
+    padding-top: 10px;
+    height: 160px;
+    resize: none;
+}
+.contact .contact-content .right form button{
+    height: 50px;
+    width: 180px;
+    margin-top: 80px;
+    border: 2px solid #B1306F;
+    background: #B1306F;
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.contact .contact-content .right form button:hover{
+    color: #B1306F;
+    background: none;
+}
+
+
+
+
 /* responsive media query start*/
 
 @media (max-width: 1150px){
@@ -174,6 +291,12 @@ section{
     .about .about-content .left img{
         width: 350px;
         height: 350px;
+    }
+    .contact .contact-content .right{
+        padding-right: 20px;
+    }
+    .contact .contact-content .left{
+        padding-left: 20px;
     }
 }
 
@@ -230,8 +353,12 @@ section{
     .about .about-content .right p{
         font: 16px;
     }
-    .about .about-text{
+    .title{
         font-size: 38px;
+    }
+    .contact .contact-content .column{
+        width: 100%;
+        margin-bottom: 30px;
     }
 }
 @media (max-width: 830px){
@@ -254,15 +381,17 @@ section{
     .about .about-content .right p{
         font: 14px;
     }
-    .about .about-text{
-        font-size: 32px;
-        margin-bottom: 30px;
-    }
     section{
         padding: 20px;
     }
     .about .about-content .right{
         padding: 5px;
+    }
+    .contact .contact-content .right form .field,
+    .contact .contact-content .right form .fields .field,  
+    .contact .contact-content .right form .field input,
+    .contact .contact-content .right form .textarea textarea{
+        font-size: 18px;
     }
 
 
