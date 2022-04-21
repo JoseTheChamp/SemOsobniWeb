@@ -22,6 +22,7 @@
     font-family: 'Roboto', sans-serif;
     padding: 26px;
     transition: all 0.3s ease;
+    z-index: 200;
 }
 .navbar.sticky{
     padding: 8px;
@@ -99,6 +100,68 @@
 
 
 
+/*about styling*/
+.about{
+    font-family: 'Roboto', sans-serif;
+}
+section{
+    padding: 100px 0;
+}
+.about .about-text{
+    position: relative;
+    text-align: center;
+    font-size: 42px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+}
+.about .about-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.about .about-content .right .text-first{
+    font-size: 26px;
+    font-weight: 400;
+}
+.about .about-content .right .text-first span{
+    color: #B1306F;
+    font-weight: 500;
+}
+.about .about-content .right p{
+    font-size: 22px;
+    font-weight: 300;
+}
+.about .about-content .right a{
+    font-weight: 400;
+    font-size: 26px;
+    display: inline-block;
+    background: #B1306F;
+    color:  white;
+    border-radius: 6px;
+    padding: 10px 30px;
+    margin-top: 30px;
+    border: 2px solid #B1306F;
+    transition: all 0.3s ease;
+}
+.about .about-content .right a:hover{
+    color: #B1306F;
+    background: none;
+}
+.about .about-content .right{
+    width: 55%;
+}
+
+
+
 /* responsive media query start*/
 
 @media (max-width: 1150px){
@@ -107,6 +170,10 @@
     }
     .home .max-width{
         margin-left: 20px;
+    }
+    .about .about-content .left img{
+        width: 350px;
+        height: 350px;
     }
 }
 
@@ -139,26 +206,66 @@
         display: inline-block;
         margin: 20px 0;
         font-size: 30px;
-
     }
-
-    @media (max-width: 580px){
-        .navbar .name a{
-            font-size: 38px;
-        }
-        .home .home-content .text-info{
-            font-size: 32px;
-            line-height: 38px;
-        }
-        .home .home-content .text-info span{
-            font-size: 36px;
-        }
-        .home .home-content .text-quote{
-            font-size: 16px;
-        }
-
-
-
+    .about .about-content .right{
+        width: 100%;
+        padding: 30px;
+    }
+    .max-width{
+        max-width: 800px;
+    }
+    .about .about-content .left{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .about .about-content .right{
+        flex: 100%;
+    }
+    .about .about-content{
+        display: inline;
+        justify-content: center;
+    }
+    .about .about-content .right p{
+        font: 16px;
+    }
+    .about .about-text{
+        font-size: 38px;
     }
 }
+@media (max-width: 830px){
+
+}
+@media (max-width: 580px){
+    .navbar .name a{
+        font-size: 38px;
+    }
+    .home .home-content .text-info{
+        font-size: 32px;
+        line-height: 38px;
+    }
+    .home .home-content .text-info span{
+        font-size: 36px;
+    }
+    .home .home-content .text-quote{
+        font-size: 16px;
+    }
+    .about .about-content .right p{
+        font: 14px;
+    }
+    .about .about-text{
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+    section{
+        padding: 20px;
+    }
+    .about .about-content .right{
+        padding: 5px;
+    }
+
+
+}
+
 
