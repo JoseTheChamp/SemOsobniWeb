@@ -16,7 +16,7 @@ html{
     margin: auto;
 }
 
-.about, .home, .contact, .navbar, .experience, footer{
+.about, .home, .contact, .navbar, .experience, footer, .skills{
     font-family: 'Roboto', sans-serif;
 }
 
@@ -40,7 +40,6 @@ html{
     font-weight: 400;
 }
 .navbar .menu li a{
-    display: none;
     color: white;
     font-size: 24px;
     font-weight: 300;
@@ -68,6 +67,9 @@ html{
     font-size: 40px;
     cursor: pointer;
     display: none;
+}
+.ref{
+    display: block;
 }
 
 
@@ -116,7 +118,9 @@ html{
     font-family: 'Roboto', sans-serif;
 }
 section{
-    padding: 60px 0;
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 .title{
     font-family: 'Roboto', sans-serif;
@@ -126,7 +130,7 @@ section{
     font-weight: 500;
     margin-bottom: 40px;
     padding-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 .about .about-content .left{
     width: 45%;
@@ -361,6 +365,42 @@ footer span a:hover{
 
 
 
+/* Skills styling*/
+.skills .skills-content .category .category-name{
+    color: #B1306F;
+    font-weight: 600;
+    font-size: 26px;
+}
+.skills .skills-content .category .category-tech{
+    font-size: 20px;
+    font-weight: 300;
+}
+.skills .skills-content .category .category-tech span{
+    font-weight: 400;
+}
+.skills .skills-content .column{
+    width: calc(50% - 30px);
+}
+.skills .skills-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-left: 5%;
+}
+.skills .skills-content .category{
+    margin-top: 25px;
+}
+.skills .skills-content .skills-text{
+    font-weight: 300;
+    font-size: 18px;
+}
+
+
+
+
+
 
 /* responsive media query start*/
 
@@ -448,6 +488,10 @@ footer span a:hover{
     .home .home-content{
         width: 90%;
     }
+    .skills .skills-content .column{
+        width: 100%;
+        margin-bottom: 30px;
+    }
 }
 @media (max-width: 750px){
     .experience .exp-content .title-exp,
@@ -478,11 +522,7 @@ footer span a:hover{
     }
     .about .about-content .right p{
         font: 14px;
-    }
-    section{
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+    }h
     .about .about-content .right{
         padding: 5px;
     }
