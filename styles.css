@@ -6,6 +6,9 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 .max-width{
     max-width: 1700px;
@@ -13,7 +16,7 @@
     margin: auto;
 }
 
-.about, .home, .contact, .navbar{
+.about, .home, .contact, .navbar, .experience, footer{
     font-family: 'Roboto', sans-serif;
 }
 
@@ -37,6 +40,7 @@
     font-weight: 400;
 }
 .navbar .menu li a{
+    display: none;
     color: white;
     font-size: 24px;
     font-weight: 300;
@@ -81,6 +85,9 @@
 .home .max-width{
     margin: auto 0 auto 60px;
 }
+.home .home-content{
+    width: 60%;
+}
 .home .home-content .text-info{
     font-size: 36px;
     font-weight: 300;
@@ -109,7 +116,7 @@
     font-family: 'Roboto', sans-serif;
 }
 section{
-    padding: 80px 0;
+    padding: 60px 0;
 }
 .title{
     font-family: 'Roboto', sans-serif;
@@ -233,6 +240,12 @@ section{
 .contact .contact-content .right form .textarea{
     height: 80px;
 }
+.contact .contact-content .right .name{
+    padding-right: 5px;
+}
+.contact .contact-content .right .email{
+    padding-left: 5px;
+}
 
 
 .contact .contact-content .right form .field input,
@@ -246,12 +259,6 @@ section{
     font-size: 24px;
     font-weight: 300;
     font-family: 'Roboto', sans-serif;
-}
-.contact .contact-content .right form .name{
-    margin-right: 10px;
-}
-.contact .contact-content .right form .email{
-    margin-left: 10px;
 }
 .contact .contact-content .right form .textarea textarea{
     padding-top: 10px;
@@ -279,6 +286,82 @@ section{
 
 
 
+/* Experience and Education styling */
+
+.experience{
+    font-family: 'Roboto', sans-serif;
+}
+.experience .special-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 60%;
+    margin-left: 15%;
+}
+.experience .exp-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-left: 5%;
+}
+.experience .exp-content .column{
+    width: calc(50% - 30px);
+}
+.experience .exp-content .exp-data{
+    border-radius: 12px;
+    margin-bottom: 28px;
+}
+.experience .exp-content .exp-data .exp-title{
+    font-size: 26px;
+    color: #B1306F;
+}
+.experience .exp-content .exp-data .exp-subtitle{
+    font-size: 22px;
+    font-weight: 400;
+}   
+.experience .exp-content .exp-data .exp-calendar{
+    font-size: 22px;
+    font-weight: 400;
+}   
+.experience .exp-content .exp-data .exp-text{
+    font-size: 20px;
+    font-weight: 300;
+} 
+.experience .exp-content .exp-data .exp-title span{
+    font-size: 22px;
+    font-weight: 400;
+}
+.experience .exp-content .title-exp,
+.experience .exp-content .title-edu{
+    display: none;
+}
+
+
+
+
+
+/* footer styling*/
+footer{
+    background: #111;
+    padding: 20px 24px;
+    color: white;
+    text-align: center;
+    font-weight: 400;
+}
+footer span a{
+    color: #B1306F;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
 /* responsive media query start*/
 
 @media (max-width: 1150px){
@@ -294,9 +377,11 @@ section{
     }
     .contact .contact-content .right{
         padding-right: 20px;
+        padding-left: 20px;
     }
     .contact .contact-content .left{
         padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
@@ -360,9 +445,22 @@ section{
         width: 100%;
         margin-bottom: 30px;
     }
+    .home .home-content{
+        width: 90%;
+    }
 }
-@media (max-width: 830px){
-
+@media (max-width: 750px){
+    .experience .exp-content .title-exp,
+    .experience .exp-content .title-edu{
+        display: block;
+    }
+    .experience .special-title{
+        display: none;
+    }
+    .experience .exp-content .column{
+        width: 90%;
+    }
+    
 }
 @media (max-width: 580px){
     .navbar .name a{
@@ -382,7 +480,8 @@ section{
         font: 14px;
     }
     section{
-        padding: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     .about .about-content .right{
         padding: 5px;
@@ -393,6 +492,7 @@ section{
     .contact .contact-content .right form .textarea textarea{
         font-size: 18px;
     }
+    
 
 
 }
