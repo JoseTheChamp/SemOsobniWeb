@@ -75,14 +75,15 @@ html{
 
 
 
-/* Home  styling  */
+/* Home  styling #15072F  */
 .home{
     display: flex;
-    background-color: #15072F;
+    background: url(Resources/compute-ea4c57a4.png) no-repeat center;
     height: 100vh;
     color: white;
     min-height: 500px;
     font-family: 'Roboto', sans-serif;
+    background-size: cover;
 }
 .home .max-width{
     margin: auto 0 auto 60px;
@@ -405,6 +406,8 @@ footer span a:hover{
 .projects .projects-content p{
     font-weight: 300;
     font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 .projects .projects-content h3{
     font-weight: 600;
@@ -422,10 +425,18 @@ footer span a:hover{
     justify-content: space-between;
     flex-wrap: wrap;
     width: 90%;
+    margin-top: 10px;
     margin-left: 5%;
 }
 .projects .projects-content img{
     width: 100%;
+}
+.projects .projects-content .project a{
+    font-weight: 400;
+    font-size: 24px;
+}
+.projects .projects-content .project a:hover{
+    text-decoration: underline;
 }
 
 
