@@ -17,6 +17,7 @@
                     <li><a href="#home" class="menu-btn ref">Domů</a></li>
                     <li><a href="#about" class="menu-btn ref">O mně</a></li>
                     <li><a href="#experience" class="menu-btn ref">Zkušenosti a vzdělání</a></li>
+                    <li><a href="#projects" class="menu-btn ref">Projekty</a></li>
                     <li><a href="#skills" class="menu-btn ref">Schopnosti</a></li>
                     <li><a href="#contact" class="menu-btn ref">Kontakt</a></li>
                 </ul>
@@ -44,7 +45,8 @@
                     <div class="right">
                         <div class="text-first">Jmenuji se josef a snažím se být dobrým <span>programátorem</span>.</div>
                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In dapibus augue non sapien. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Ut tempus purus at lorem. Vivamus porttitor turpis ac leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus.</p>
-                        <a href="#">Stáhněte si můj životopis.</a>
+                        <button id="download-cv">Stáhněte si můj životopis.</button>
+                        
                     </div>
                 </div>
             </div>
@@ -131,6 +133,31 @@
                 </div>
             </div>
         </section>
+        <section class="projects" id="projects">
+            <div class="max-width">
+                <h2 class="title">Projekty</h2>
+                <div class="projects-content">
+                    <div class="project project-left">
+                        <div class="column left">
+                            <h3>Projekt 1</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In dapibus augue non sapien. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui</p>
+                        </div>
+                        <div class="column right">
+                            <img src="Resources/Portrait_Placeholder.png" alt="Muj obrazek">
+                        </div>
+                    </div>
+                    <div class="project project-right">
+                        <div class="column left">
+                            <img src="Resources/Portrait_Placeholder.png" alt="Muj obrazek">
+                        </div>
+                        <div class="column right">
+                            <h3>Projekt 2</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In dapibus augue non sapien. Duis sapien nunc, commodo et, interdum suscipit, sollicitudin et, dolor. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="skills" id="skills">
             <div class="max-width">
                 <h2 class="title">Schopnosti</h2>
@@ -206,20 +233,20 @@
                     </div>
                     <div class="column right">
                         <div class="text">Kontaktujte mně.</div>
-                        <form action="#">
+                        <form id="contact-form">
                             <div class="fields">
                                 <div class="field name">
-                                    <input type="text" placeholder="Jmeno" required>
+                                    <input id="name" type="text" placeholder="Jmeno" required>
                                 </div>
                                 <div class="field email">
-                                    <input type="email" placeholder="Email" required>
+                                    <input id="email" type="email" placeholder="Email" required>
                                 </div>
                             </div>
                             <div class="field">
-                                <input type="text" placeholder="Předmět" required>
+                                <input id="subject" type="text" placeholder="Předmět" required>
                             </div>
                             <div class="field textarea">
-                                <textarea cols="30" rows="10" placeholder="Obsah zprávy..." required></textarea>
+                                <textarea id="text" cols="30" rows="10" placeholder="Obsah zprávy..." required></textarea>
                             </div>
                             <div class="button">
                                 <button type="submit">Poslat zprávu</button>
@@ -232,6 +259,8 @@
         <footer>
             <span>Vytvořeno <a href="#">Josef Knotek</a> | <span class="uil uil-copyright"></span> 2022 Všechna práva vyhrazena.</span>
         </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
         <script src="main.js"></script>
     </body>
 </html>

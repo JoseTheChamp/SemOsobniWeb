@@ -16,7 +16,7 @@ html{
     margin: auto;
 }
 
-.about, .home, .contact, .navbar, .experience, footer, .skills{
+.about, .home, .contact, .navbar, .experience, footer, .skills, .projects{
     font-family: 'Roboto', sans-serif;
 }
 
@@ -157,7 +157,7 @@ section{
     font-size: 22px;
     font-weight: 300;
 }
-.about .about-content .right a{
+.about .about-content .right button{
     font-weight: 400;
     font-size: 26px;
     display: inline-block;
@@ -168,8 +168,9 @@ section{
     margin-top: 30px;
     border: 2px solid #B1306F;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
-.about .about-content .right a:hover{
+.about .about-content .right button:hover{
     color: #B1306F;
     background: none;
 }
@@ -349,6 +350,7 @@ section{
 
 /* footer styling*/
 footer{
+    margin-top: 40px;
     background: #111;
     padding: 20px 24px;
     color: white;
@@ -399,15 +401,45 @@ footer span a:hover{
 
 
 
+/* Projects styling */
+.projects .projects-content p{
+    font-weight: 300;
+    font-size: 22px;
+}
+.projects .projects-content h3{
+    font-weight: 600;
+    font-size: 28px;
+    color: #B1306F;
+}
+.projects .projects-content .project-left .column,
+.projects .projects-content .project-right .column{
+    width: calc(50% - 30px);
+}
+.projects .projects-content .project-left,
+.projects .projects-content .project-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-left: 5%;
+}
+.projects .projects-content img{
+    width: 100%;
+}
+
+
 
 
 
 /* responsive media query start*/
-
-@media (max-width: 1150px){
+@media(max-width: 1350px){
     .max-width{
         padding: 0 15px;
     }
+}
+
+@media (max-width: 1150px){
     .home .max-width{
         margin-left: 20px;
     }
@@ -492,6 +524,23 @@ footer span a:hover{
         width: 100%;
         margin-bottom: 30px;
     }
+    .projects .projects-content .project-left .column,
+    .projects .projects-content .project-right .column{
+        width: 90%;
+    }
+    .projects .projects-content img{
+        margin-top: 30px;
+    }
+    .projects .projects-content h3{
+        margin-top: 30px;
+    }
+    .projects .projects-content .project-right .left{
+        order: 2;
+    }
+    .projects .projects-content .project-right .right{
+        order: 1;
+    }
+
 }
 @media (max-width: 750px){
     .experience .exp-content .title-exp,
