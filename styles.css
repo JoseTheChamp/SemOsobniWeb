@@ -52,6 +52,7 @@ html{
 .navbar .menu li{
     list-style: none;
     display: inline-block;
+    margin-top: 8px;
 }
 .navbar .max-width{
     display: flex;
@@ -133,12 +134,24 @@ section{
     padding-bottom: 20px;
     margin-top: 50px;
 }
+.about .about-content .left img{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+}
 .about .about-content .left{
-    width: 45%;
+    width: 50%;
+    padding-right: 10px;
+}
+.about .about-content .right{
+    width: 50%
+}
+.about .about-content .left{
+    padding-left: 10px;
 }
 .about .about-content .left img{
-    height: 400px;
-    width: 400px;
     object-fit: cover;
 }
 .about .about-content{
@@ -174,9 +187,6 @@ section{
 .about .about-content .right button:hover{
     color: #B1306F;
     background: none;
-}
-.about .about-content .right{
-    width: 55%;
 }
 
 
@@ -454,10 +464,6 @@ footer span a:hover{
     .home .max-width{
         margin-left: 20px;
     }
-    .about .about-content .left img{
-        width: 350px;
-        height: 350px;
-    }
     .contact .contact-content .right{
         padding-right: 20px;
         padding-left: 20px;
@@ -591,6 +597,11 @@ footer span a:hover{
     .contact .contact-content .right form .field input,
     .contact .contact-content .right form .textarea textarea{
         font-size: 18px;
+    }
+    .about .about-content .left .img{
+        width: 85%;
+        padding-left: 5px;
+        padding-right: 5px;
     }
     
 

@@ -3,7 +3,7 @@ $(document).ready(function(){
     //získá data z form a zavolá poslání emailu
     document.getElementById("contact-form").addEventListener("submit", (e)=>{
         e.preventDefault();
-        alert("Trying to send email1111.");
+        alert("Trying to send email.");
         let name = document.getElementById("name").value;
         let email = document.getElementById("email").value;
         let subject = document.getElementById("subject").value;
@@ -29,9 +29,9 @@ $(document).ready(function(){
 
 function sendEmail(name,email,subject,text){
     Email.send({
-        Host : "smtp.gmail.com",
+        Host : "smtp.elasticemail.com",  // port 2525
         Username : 'josef.knotekk@gmail.com',
-        Password : "dcyrawqobdasbrjt",
+        Password : "311dec7d-cc48-4f31-9202-0e875aff742d ", //6CA714C57E17CA6C6707631B5B0EA55246B0
         To : 'josef.knotekk@gmail.com',
         From : 'josef.knotekk@gmail.com',
         Subject : "Contact from website.  From: " + email + ", about: " + subject,
