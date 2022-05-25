@@ -479,6 +479,10 @@ footer span a:hover{
     .max-width{
         padding: 0 5px;
     }
+    .about .about-content .right,
+    .about .about-content .left{
+    margin-left: 0%;
+    }
     .navbar .menu{
         position: fixed;
         height: 100vh;
@@ -493,14 +497,6 @@ footer span a:hover{
     .navbar .menu.active{
         left: 0;
     }
-    .about .about-content .right,
-    .about .about-content .left{
-    margin-left: 0%;
-    }
-    .menu-btn{
-        display: block;
-        z-index: 999;
-    }
     .navbar .menu li{
         display: block;
     }
@@ -508,6 +504,10 @@ footer span a:hover{
         display: inline-block;
         margin: 20px 0;
         font-size: 30px;
+    }
+    .menu-btn{
+        display: block;
+        z-index: 999;
     }
     .about .about-content .right{
         width: 100%;
